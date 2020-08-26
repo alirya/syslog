@@ -1,0 +1,2 @@
+# t-syslog
+typescipt syslog
