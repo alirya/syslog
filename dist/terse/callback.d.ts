@@ -1,8 +1,7 @@
 import Syslog from "./syslog";
-
 export default class Callback<Arguments extends unknown[] = unknown[]> implements Syslog<Arguments> {
-    callback: (severity:string, ...args:Arguments)=>void;
-    constructor(callback: (severity:string, ...args:Arguments)=>void);
+    callback: (severity: string, ...args: Arguments) => void;
+    constructor(callback: (severity: string, ...args: Arguments) => void);
     alert(...argument: Arguments): void;
     crit(...argument: Arguments): void;
     debug(...argument: Arguments): void;

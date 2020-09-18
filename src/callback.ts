@@ -1,10 +1,9 @@
 import Syslog from "./syslog";
-import Function from "@dikac/t-function/function";
 
 export default class Callback<Arguments extends unknown[] = unknown[]> implements Syslog<Arguments> {
 
     constructor(
-        public callback : Function<[string, ...Arguments], void>) {
+        public callback : (severity:string, ...args:Arguments)=>void) {
     }
 
     alert(...argument: Arguments) {

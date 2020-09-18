@@ -1,43 +1,30 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+export default class Callback {
+    constructor(callback) {
+        this.callback = callback;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    alert(...argument) {
+        this.callback('alert', ...argument);
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    class Callback {
-        constructor(callback) {
-            this.callback = callback;
-        }
-        alert(...argument) {
-            this.callback('alert', ...argument);
-        }
-        critical(...argument) {
-            this.callback('critical', ...argument);
-        }
-        debug(...argument) {
-            this.callback('debug', ...argument);
-        }
-        emergency(...argument) {
-            this.callback('emergency', ...argument);
-        }
-        error(...argument) {
-            this.callback('error', ...argument);
-        }
-        informational(...argument) {
-            this.callback('informational', ...argument);
-        }
-        notice(...argument) {
-            this.callback('notice', ...argument);
-        }
-        warning(...argument) {
-            this.callback('warning', ...argument);
-        }
+    critical(...argument) {
+        this.callback('critical', ...argument);
     }
-    exports.default = Callback;
-});
+    debug(...argument) {
+        this.callback('debug', ...argument);
+    }
+    emergency(...argument) {
+        this.callback('emergency', ...argument);
+    }
+    error(...argument) {
+        this.callback('error', ...argument);
+    }
+    informational(...argument) {
+        this.callback('informational', ...argument);
+    }
+    notice(...argument) {
+        this.callback('notice', ...argument);
+    }
+    warning(...argument) {
+        this.callback('warning', ...argument);
+    }
+}
 //# sourceMappingURL=callback.js.map

@@ -1,43 +1,30 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+export default class FromVerbose {
+    constructor(verbose) {
+        this.verbose = verbose;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    alert(...argument) {
+        this.verbose.alert(...argument);
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    class FromVerbose {
-        constructor(verbose) {
-            this.verbose = verbose;
-        }
-        alert(...argument) {
-            this.verbose.alert(...argument);
-        }
-        crit(...argument) {
-            this.verbose.critical(...argument);
-        }
-        debug(...argument) {
-            this.verbose.debug(...argument);
-        }
-        emerg(...argument) {
-            this.verbose.emergency(...argument);
-        }
-        error(...argument) {
-            this.verbose.error(...argument);
-        }
-        info(...argument) {
-            this.verbose.informational(...argument);
-        }
-        notice(...argument) {
-            this.verbose.notice(...argument);
-        }
-        warning(...argument) {
-            this.verbose.warning(...argument);
-        }
+    crit(...argument) {
+        this.verbose.critical(...argument);
     }
-    exports.default = FromVerbose;
-});
+    debug(...argument) {
+        this.verbose.debug(...argument);
+    }
+    emerg(...argument) {
+        this.verbose.emergency(...argument);
+    }
+    error(...argument) {
+        this.verbose.error(...argument);
+    }
+    info(...argument) {
+        this.verbose.informational(...argument);
+    }
+    notice(...argument) {
+        this.verbose.notice(...argument);
+    }
+    warning(...argument) {
+        this.verbose.warning(...argument);
+    }
+}
 //# sourceMappingURL=from-verbose.js.map
