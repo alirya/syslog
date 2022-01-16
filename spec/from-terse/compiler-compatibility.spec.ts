@@ -1,7 +1,7 @@
-import TerseCallback from "../../dist/terse/callback";
-import FromTerse from "../../dist/from-terse";
+import TerseCallback from '../../dist/terse/callback';
+import FromTerse from '../../dist/from-terse';
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 describe('basic', () => {
@@ -17,4 +17,4 @@ describe('basic', () => {
     callback.notice('string', 1, true);
     callback.informational('string', 1, true);
     callback.debug('string', 1, true);
-})
+});

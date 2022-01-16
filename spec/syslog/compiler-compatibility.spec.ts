@@ -1,6 +1,6 @@
-import Callback from "../../dist/callback";
+import Callback from '../../dist/callback';
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 describe('basic', () => {
@@ -15,4 +15,4 @@ describe('basic', () => {
     callback.notice('string', 1, true);
     callback.informational('string', 1, true);
     callback.debug('string', 1, true);
-})
+});

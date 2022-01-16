@@ -1,7 +1,7 @@
-import VerboseCallback from "../../../dist/callback";
-import FromVerbose from "../../../dist/terse/from-verbose";
+import VerboseCallback from '../../../dist/callback';
+import FromVerbose from '../../../dist/terse/from-verbose';
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 let argument : any[] = [];
 

@@ -1,6 +1,6 @@
-import VerboseSyslog from "../syslog";
-import VerboseSyslogInfer from "../parameter/infer";
-import Syslog from "./syslog";
+import VerboseSyslog from '../syslog';
+import VerboseSyslogInfer from '../parameter/infer';
+import Syslog from './syslog';
 
 export default class FromVerbose<Terse extends VerboseSyslog> implements Syslog<VerboseSyslogInfer<Terse>> {
 

@@ -1,7 +1,7 @@
-import VerboseCallback from "../../../dist/callback";
-import FromVerbose from "../../../dist/terse/from-verbose";
+import VerboseCallback from '../../../dist/callback';
+import FromVerbose from '../../../dist/terse/from-verbose';
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 describe('basic', () => {
@@ -17,4 +17,4 @@ describe('basic', () => {
     callback.notice('string', 1, true);
     callback.info('string', 1, true);
     callback.debug('string', 1, true);
-})
+});

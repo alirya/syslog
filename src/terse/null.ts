@@ -1,4 +1,4 @@
-import Syslog from "./syslog";
+import Syslog from './syslog';
 
 export default class Null<Arguments extends unknown[] = unknown[]> implements Syslog<Arguments> {
 

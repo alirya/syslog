@@ -1,7 +1,7 @@
-import Callback from "../../dist/callback";
+import Callback from '../../dist/callback';
 
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 let argument : any[] = [];
