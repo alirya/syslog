@@ -4,7 +4,7 @@ import FromTerse from '../../dist/from-terse';
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
-describe('basic', () => {
+it('basic', () => {
 
     let terse = new TerseCallback<[string, number, boolean]>(()=>undefined);
     let callback = new FromTerse(terse);

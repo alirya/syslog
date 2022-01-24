@@ -2,7 +2,7 @@ import Callback from '../../../dist/terse/callback';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
-describe('basic', () => {
+it('basic', () => {
 
     let callback = new Callback<[string, number, boolean]>(()=>undefined);
 

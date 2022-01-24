@@ -4,7 +4,7 @@ import FromVerbose from '../../../dist/terse/from-verbose';
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
-describe('basic', () => {
+it('basic', () => {
 
     let terse = new VerboseCallback<[string, number, boolean]>(()=>undefined);
     let callback = new FromVerbose(terse);
