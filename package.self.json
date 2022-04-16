@@ -1,9 +1,9 @@
 {
   "name": "@alirya/syslog",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Typescript syslog",
   "dependencies": {
-    "@alirya/function": "^0.15.0",
+    "@alirya/function": "^0.16.0",
     "ts-toolbelt": "^9.6.0"
   },
   "homepage": "https://github.com/alirya/syslog",
