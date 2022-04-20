@@ -1,10 +1,22 @@
 {
   "name": "@alirya/syslog",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Typescript syslog",
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "author": {
+    "name": "Andika Candra"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/alirya/syslog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alirya/syslog"
+  },
   "dependencies": {
     "tslib": "^2.3.1",
-    "@alirya/function": "^0.16.0",
+    "@alirya/function": "^0.16.2",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
@@ -26,6 +38,7 @@
     "utility-types": "^3.10.0",
     "package-version-git-tag": "^3.0.0"
   },
+  "private": true,
   "scripts": {
     "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
     "spec-run": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json --reporter=jasmine-ts-console-reporter",
@@ -58,18 +71,5 @@
     "_release-remove-compile-cache": "rimraf ./dist/compiler-cache.json",
     "_doc-generate": "typedoc --entryPointStrategy expand ./src --out docs",
     "_doc-clean": "rimraf docs"
-  },
-  "publishConfig": {
-    "directory": "dist"
-  },
-  "author": {
-    "name": "Andika Candra"
-  },
-  "private": true,
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/alirya/syslog",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alirya/syslog"
   }
 }
