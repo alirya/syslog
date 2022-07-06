@@ -1,5 +1,5 @@
-import TerseCallback from '../../dist/terse/callback';
-import FromTerse from '../../dist/from-terse';
+import TerseCallback from '../../dist/terse/callback.js';
+import FromTerse from '../../dist/from-terse.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 

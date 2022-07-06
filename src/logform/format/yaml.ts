@@ -1,6 +1,6 @@
 import {Format, TransformableInfo} from "logform";
 import moment from "moment-timezone";
-import TripleBeam from 'triple-beam';
+import TripleBeam from 'triple-beam.js';
 import Trim from "@alirya/string/trim-parameters";
 import ToYaml from "../../string/to-yaml";
 import {DumpOptions} from "js-yaml";

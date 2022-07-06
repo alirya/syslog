@@ -1,5 +1,5 @@
-import VerboseCallback from '../../../dist/callback';
-import FromVerbose from '../../../dist/terse/from-verbose';
+import VerboseCallback from '../../../dist/callback.js';
+import FromVerbose from '../../../dist/terse/from-verbose.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 

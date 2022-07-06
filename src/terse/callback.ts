@@ -1,4 +1,4 @@
-import Syslog from './syslog';
+import Syslog from './syslog.js';
 
 export default class Callback<Arguments extends unknown[] = unknown[]> implements Syslog<Arguments> {
 

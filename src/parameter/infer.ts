@@ -1,4 +1,4 @@
-import Syslog from '../syslog';
+import Syslog from '../syslog.js';
 
 /**
  * get {@link Syslog.message} type

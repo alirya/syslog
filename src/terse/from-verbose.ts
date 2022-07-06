@@ -1,6 +1,6 @@
-import VerboseSyslog from '../syslog';
-import VerboseSyslogInfer from '../parameter/infer';
-import Syslog from './syslog';
+import VerboseSyslog from '../syslog.js';
+import VerboseSyslogInfer from '../parameter/infer.js';
+import Syslog from './syslog.js';
 
 export default class FromVerbose<Terse extends VerboseSyslog> implements Syslog<VerboseSyslogInfer<Terse>> {
 
