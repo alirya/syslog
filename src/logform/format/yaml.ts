@@ -1,7 +1,7 @@
 import {Format, TransformableInfo} from "logform";
 import moment from "moment-timezone";
 import TripleBeam from 'triple-beam';
-import Trim from "@alirya/string/trim-parameters";
+import { TrimParameters } from "@alirya/string/trim";
 import ToYaml from "../../string/to-yaml";
 import {DumpOptions} from "js-yaml";
 
@@ -34,7 +34,7 @@ export default class Yaml implements Format {
             body = ToYaml(meta, this.options);
         }
 
-        transform[TripleBeam.MESSAGE] = Trim(`${date}: ${message}\n${body}`);
+        transform[TripleBeam.MESSAGE] = TrimParameters(`${date}: ${message}\n${body}`);
 
         return transform;
     }
