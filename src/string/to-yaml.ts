@@ -43,5 +43,5 @@ export default function ToYaml(data : any, option: DumpOptions = {}) : string {
 
     option = Object.assign(defaults, option);
 
-    return dump(data, option)
+    return dump(data, option);
 }

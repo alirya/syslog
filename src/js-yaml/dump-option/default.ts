@@ -27,6 +27,11 @@ export default function Default<Config extends DumpOptions>(option: Config) : Co
                 }
             }
 
+            if(value instanceof Date) {
+
+                return value.toString()
+            }
+
             if(Array.isArray(value)) {
 
                 return value;
