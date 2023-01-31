@@ -22,6 +22,8 @@
     "@alirya/function": "^0.17.1",
     "@alirya/object": "^0.38.1",
     "@alirya/class": "^0.4.1",
+    "@alirya/value": "^0.16.1",
+    "@alirya/validatable": "^0.21.1",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {

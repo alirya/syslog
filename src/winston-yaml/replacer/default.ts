@@ -1,24 +1,27 @@
 import Replacer from "./replacer";
-import Buffer from "./pair/buffer";
-import EventEmitter from "./pair/event-emitter";
-import Function from "./pair/function";
-import Date from "./pair/date";
-import Array from "./pair/array";
-import Object from "./pair/object";
+import Buffer from "./buffer";
+import EventEmitter from "./event-emitter";
+import Function from "./function";
+import Date from "./date";
+import Array from "./array";
+import Object from "./object";
+import CircularReference from "./circular-reference";
+import Compound from "./compound";
 
 export default function Default(
-    previous : Replacer = [],
-    next: Replacer = []
+    previous : Replacer[] = [],
+    next: Replacer[] = []
 ) : Replacer {
 
-    return [
+    return Compound([
         ...previous,
-        Buffer(),
-        EventEmitter(),
-        Function(),
+        CircularReference,
+        Buffer,
+        EventEmitter,
+        Function,
         Date(),
-        Array(),
-        Object(),
+        Array,
+        Object,
         ...next,
-    ]
+    ])
 }

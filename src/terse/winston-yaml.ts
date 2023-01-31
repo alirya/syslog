@@ -7,14 +7,15 @@ import Level from "../level/level";
 import LevelNameTerse from "../string/level-name-terse";
 import Callable from '@alirya/function/callable';
 import Replacer from "../winston-yaml/replacer/replacer";
+import {Required} from "utility-types";
 
 export type WinstonYamlOption = Omit<YamlOption, 'replacer'> & {
     level : Level;
-    replacer : Replacer
+    replacer ?: Replacer
 }
 // export type WinstonYamlOptionReplacer = [Callable<[any], boolean>, Callable<[any], any>][];
 
-export const WinstonYamlOptionDefault: WinstonYamlOption = Object.freeze({
+export const WinstonYamlOptionDefault: Required<WinstonYamlOption, 'level'|'replacer'|'format'|'timezone'> = Object.freeze({
     level : Level.DEBUG,
     replacer: Object.freeze(DefaultReplacer()) as Replacer,
     format : 'YYYY/MM/DD HH-mm-ssZZ',
@@ -40,19 +41,10 @@ export default function WinstonYaml(option : Partial<WinstonYamlOption> = {}) : 
     });
 }
 
-export function WinstonYamlOptionConvert(option : WinstonYamlOption) : YamlOption {
+export function WinstonYamlOptionConvert(option : Required<WinstonYamlOption, 'replacer'>) : YamlOption {
 
     const replacer = function (key, value) {
-
-        for (const [validation, converter] of option.replacer) {
-
-            if(validation(value, key)) {
-
-                return converter(value);
-            }
-        }
-
-        return value;
+        return option.replacer(value).value;
     }
 
     return {...option, replacer}
