@@ -1,13 +1,13 @@
-import TerseCallback from '../../dist/terse/callback';
-import FromTerse from '../../dist/from-terse';
+import TerseCallback from '../../dist/terse/callback.js';
+import FromTerse from '../../dist/from-terse.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 it('basic', () => {
 
-    let terse = new TerseCallback<[string, number, boolean]>(()=>undefined);
-    let callback = new FromTerse(terse);
+    const terse = new TerseCallback<[string, number, boolean]>(()=>undefined);
+    const callback = new FromTerse(terse);
 
     callback.emergency('string', 1, true);
     callback.alert('string', 1, true);

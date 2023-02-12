@@ -1,4 +1,4 @@
-import Default from "../../../dist/winston-yaml/replacer/default";
+import Default from '../../../dist/winston-yaml/replacer/default.js';
 
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
@@ -6,7 +6,7 @@ it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 class Parent {
 
-    type : string = 'parent';
+    type  = 'parent';
 
     constructor(public children : Children) {
 
@@ -16,7 +16,7 @@ class Parent {
 
 class Children {
 
-    type : string = 'children';
+    type  = 'children';
     buffer: Buffer = Buffer.from('abc');
 
     constructor(public parent ?: Parent) {
@@ -28,7 +28,6 @@ class Children {
 it('test', () => {
 
     const object = Default()(new Parent(new Children())).value;
-    console.log(object);
 
     expect(object).toEqual({
             children: {

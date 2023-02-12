@@ -1,8 +1,8 @@
-import Callable from '@alirya/function/callable';
-import Pair from "./pair/pair";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Valid from "@alirya/validatable/validatable";
+import Callable from '@alirya/function/callable.js';
+import Pair from './pair/pair.js';
+import Value from "@alirya/value/value.js";
+import Validatable from "@alirya/validatable/validatable.js";
+import Valid from "@alirya/validatable/validatable.js";
 
 // type Replacer = Pair[];
 export default interface Replacer/*<Type extends any>*/ {

@@ -1,4 +1,4 @@
-import Replacer, {ReplacerReturn} from "./replacer";
+import Replacer, {ReplacerReturn} from './replacer.js';
 
 
 // export default class Buffer implements Replacer<globalThis.Buffer> {

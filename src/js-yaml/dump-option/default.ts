@@ -1,9 +1,9 @@
 // import {DEFAULT_SCHEMA, DumpOptions} from "js-yaml";
 // import util from "util";
-// import ObjectType from "@alirya/object/boolean/object";
-// import FunctionType from "@alirya/function/boolean/function";
+// import ObjectType from "@alirya/object/boolean/object.js";
+// import FunctionType from "@alirya/function/boolean/function.js";
 // import {EventEmitter} from "events";
-// import Name from '@alirya/object/string/name';
+// import Name from '@alirya/object/string/name.js';
 //
 // export default function Default<Config extends DumpOptions>(option: Config) : Config {
 //

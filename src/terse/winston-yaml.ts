@@ -1,12 +1,12 @@
 import Winston from "winston";
-import Syslog from "./syslog";
-import Yaml, {YamlOption} from "../logform/format/yaml";
-// import Default from "../js-yaml/dump-option/default";
-import DefaultReplacer from "../winston-yaml/replacer/default";
-import Level from "../level/level";
-import LevelNameTerse from "../string/level-name-terse";
-import Callable from '@alirya/function/callable';
-import Replacer from "../winston-yaml/replacer/replacer";
+import Syslog from './syslog.js';
+import Yaml, {YamlOption} from '../logform/format/yaml.js';
+// import Default from "../js-yaml/dump-option/default.js";
+import DefaultReplacer from '../winston-yaml/replacer/default.js';
+import Level from '../level/level.js';
+import LevelNameTerse from '../string/level-name-terse.js';
+import Callable from '@alirya/function/callable.js';
+import Replacer from '../winston-yaml/replacer/replacer.js';
 import {Required} from "utility-types";
 
 export type WinstonYamlOption = Omit<YamlOption, 'replacer'> & {

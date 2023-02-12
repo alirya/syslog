@@ -1,7 +1,7 @@
 import {DEFAULT_SCHEMA, dump, DumpOptions} from "js-yaml";
 import * as util from "util";
-import ObjectType from "@alirya/object/boolean/object";
-import FunctionType from "@alirya/function/boolean/function";
+import ObjectType from "@alirya/object/boolean/object.js";
+import FunctionType from "@alirya/function/boolean/function.js";
 
 export default function ToYaml(data : any, option: DumpOptions = {}) : string {
 

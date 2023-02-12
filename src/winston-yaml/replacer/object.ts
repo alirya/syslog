@@ -1,5 +1,5 @@
-import Replacer, {ReplacerReturn} from "./replacer";
-import ObjectType from '@alirya/object/boolean/object';
+import Replacer, {ReplacerReturn} from './replacer.js';
+import ObjectType from '@alirya/object/boolean/object.js';
 
 //
 // export default class Object implements Replacer {

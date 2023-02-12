@@ -1,6 +1,6 @@
-import Replacer, {ReplacerReturn} from "./replacer";
+import Replacer, {ReplacerReturn} from './replacer.js';
 import {EventEmitter as EventEmitterOrigin} from "events";
-import Name from '@alirya/object/string/name';
+import Name from '@alirya/object/string/name.js';
 
 // export default class EventEmitter implements Replacer {
 //

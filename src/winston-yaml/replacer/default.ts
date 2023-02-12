@@ -1,12 +1,12 @@
-import Replacer from "./replacer";
-import Buffer from "./buffer";
-import EventEmitter from "./event-emitter";
-import Function from "./function";
-import Date from "./date";
-import Array from "./array";
-import Object from "./object";
-import CircularReference from "./circular-reference";
-import Compound from "./compound";
+import Replacer from './replacer.js';
+import Buffer from './buffer.js';
+import EventEmitter from './event-emitter.js';
+import Function from './function.js';
+import Date from './date.js';
+import Array from './array.js';
+import Object from './object.js';
+import CircularReference from './circular-reference.js';
+import Compound from './compound.js';
 
 export default function Default(
     previous : Replacer[] = [],

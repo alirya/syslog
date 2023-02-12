@@ -1,4 +1,4 @@
-import Pair from "./pair";
+import Pair from './pair.js';
 
 export default function Date() : Pair {
 

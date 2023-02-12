@@ -1,5 +1,5 @@
-import Replacer, {ReplacerReturn} from "./replacer";
-import Callable from '@alirya/function/callable';
+import Replacer, {ReplacerReturn} from './replacer.js';
+import Callable from '@alirya/function/callable.js';
 
 
 // export default class Date implements Replacer {

@@ -1,10 +1,10 @@
-import Callback from '../../../dist/terse/callback';
+import Callback from '../../../dist/terse/callback.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 it('basic', () => {
 
-    let callback = new Callback<[string, number, boolean]>(()=>undefined);
+    const callback = new Callback<[string, number, boolean]>(()=>undefined);
 
     callback.emerg('string', 1, true);
     callback.alert('string', 1, true);

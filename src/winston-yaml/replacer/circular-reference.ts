@@ -1,6 +1,6 @@
-import Replacer, {ReplacerReturn} from "./replacer";
-import ObjectType from '@alirya/object/boolean/object';
-import Name from '@alirya/object/string/name';
+import Replacer, {ReplacerReturn} from './replacer.js';
+import ObjectType from '@alirya/object/boolean/object.js';
+import Name from '@alirya/object/string/name.js';
 
 
 // export default class CircularReference implements Replacer {

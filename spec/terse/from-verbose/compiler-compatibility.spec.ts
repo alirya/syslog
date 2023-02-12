@@ -1,13 +1,13 @@
-import VerboseCallback from '../../../dist/callback';
-import FromVerbose from '../../../dist/terse/from-verbose';
+import VerboseCallback from '../../../dist/callback.js';
+import FromVerbose from '../../../dist/terse/from-verbose.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 it('basic', () => {
 
-    let terse = new VerboseCallback<[string, number, boolean]>(()=>undefined);
-    let callback = new FromVerbose(terse);
+    const terse = new VerboseCallback<[string, number, boolean]>(()=>undefined);
+    const callback = new FromVerbose(terse);
 
     callback.emerg('string', 1, true);
     callback.alert('string', 1, true);

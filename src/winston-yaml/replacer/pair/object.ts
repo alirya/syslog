@@ -1,8 +1,8 @@
-import Pair from "./pair";
-import FunctionType from '@alirya/function/boolean/function';
+import Pair from './pair.js';
+import FunctionType from '@alirya/function/boolean/function.js';
 import util from "util";
-import ObjectType from '@alirya/object/boolean/object';
-import Name from '@alirya/object/string/name';
+import ObjectType from '@alirya/object/boolean/object.js';
+import Name from '@alirya/object/string/name.js';
 
 export default function Object() : Pair {
     return [
@@ -14,7 +14,7 @@ export default function Object() : Pair {
 
 export function ObjectTrimCircular(object: object, reference: Set<object> = new Set<object>()) : object {
 
-    let copy = globalThis.Object.assign({}, object)
+    const copy = globalThis.Object.assign({}, object)
 
     reference.add(object);
 

@@ -1,4 +1,4 @@
-import Level from "../level/level";
+import Level from '../level/level.js';
 
 export default function LevelName(level : Level) : string {
 

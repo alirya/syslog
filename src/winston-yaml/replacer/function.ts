@@ -1,6 +1,6 @@
-import Replacer, {ReplacerReturn} from "./replacer";
-import Callable from '@alirya/function/callable';
-import FunctionType from '@alirya/function/boolean/function';
+import Replacer, {ReplacerReturn} from './replacer.js';
+import Callable from '@alirya/function/callable.js';
+import FunctionType from '@alirya/function/boolean/function.js';
 import util from "util";
 
 

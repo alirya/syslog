@@ -1,6 +1,6 @@
-import TerseSyslog from './terse/syslog';
-import TerseSyslogInfer from './terse/parameter/infer';
-import Syslog from './syslog';
+import TerseSyslog from './terse/syslog.js';
+import TerseSyslogInfer from './terse/parameter/infer.js';
+import Syslog from './syslog.js';
 
 export default class FromTerse<Terse extends TerseSyslog> implements Syslog<TerseSyslogInfer<Terse>> {
 

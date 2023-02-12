@@ -1,6 +1,6 @@
-import Pair from "./pair";
+import Pair from './pair.js';
 import {EventEmitter as EventEmitterOrigin} from "events";
-import Name from '@alirya/object/string/name';
+import Name from '@alirya/object/string/name.js';
 
 
 export default function EventEmitter() : Pair {

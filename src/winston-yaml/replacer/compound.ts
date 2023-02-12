@@ -1,4 +1,4 @@
-import Replacer from "./replacer";
+import Replacer from './replacer.js';
 
 //
 // export default class Compound implements Replacer<object> {
@@ -37,7 +37,7 @@ export default function Compound(replacers: Replacer[]) : Replacer {
 
     replace = function (value: any, formatted: any[]= [], parent?: Replacer) {
 
-        let valid : boolean = false;
+        let valid  = false;
 
         for (const replacer of replacers) {
 

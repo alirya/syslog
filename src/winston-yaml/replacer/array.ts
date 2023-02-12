@@ -1,4 +1,4 @@
-import Replacer, {ReplacerReturn} from "./replacer";
+import Replacer, {ReplacerReturn} from './replacer.js';
 
 //
 // export default class Array implements Replacer<globalThis.Array<any>> {

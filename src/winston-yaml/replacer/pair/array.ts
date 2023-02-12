@@ -1,5 +1,5 @@
-import Pair from "./pair";
-import FunctionType from '@alirya/function/boolean/function';
+import Pair from './pair.js';
+import FunctionType from '@alirya/function/boolean/function.js';
 import util from "util";
 
 export default function Array() : Pair {
