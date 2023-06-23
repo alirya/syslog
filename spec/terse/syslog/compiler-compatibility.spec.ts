@@ -4,7 +4,7 @@ it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 it('basic', () => {
 
-    const callback = new Callback<[string, number, boolean]>(()=>undefined);
+    const callback = Callback<[string, number, boolean]>(()=>undefined);
 
     callback.emerg('string', 1, true);
     callback.alert('string', 1, true);

@@ -6,7 +6,7 @@ it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 it('basic', () => {
 
-    const terse = new TerseCallback<[string, number, boolean]>(()=>undefined);
+    const terse = TerseCallback<[string, number, boolean]>(()=>undefined);
     const callback = new FromTerse(terse);
 
     callback.emergency('string', 1, true);

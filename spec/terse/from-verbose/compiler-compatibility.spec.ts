@@ -6,7 +6,7 @@ it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 it('basic', () => {
 
-    const terse = new VerboseCallback<[string, number, boolean]>(()=>undefined);
+    const terse = VerboseCallback<[string, number, boolean]>(()=>undefined);
     const callback = new FromVerbose(terse);
 
     callback.emerg('string', 1, true);
