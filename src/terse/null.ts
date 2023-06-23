@@ -12,3 +12,5 @@ export default class Null<Arguments extends unknown[] = unknown[]> implements Sy
     notice(...argument: Arguments) {}
     warning(...argument: Arguments) {}
 }
+
+export {Null as TerseNull}

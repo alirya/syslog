@@ -46,6 +46,6 @@ export default class FromVerbose<Terse extends VerboseSyslog> implements Syslog<
 
         this.verbose.warning(...argument);
     }
-
-
 }
+
+export {FromVerbose as TerseFromVerbose}

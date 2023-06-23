@@ -47,3 +47,5 @@ export default class Callback<Arguments extends unknown[] = unknown[]> implement
         this.callback('warning', ...argument);
     }
 }
+
+export {Callback as TerseCallback}

@@ -10,3 +10,5 @@ export default interface Syslog<Arguments extends unknown[] = unknown[]> {
     debug(...argument: Arguments);
 
 }
+
+export {Syslog as TerseSyslog}

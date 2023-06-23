@@ -2,19 +2,25 @@ import {Format, TransformableInfo} from "logform";
 import moment from "moment-timezone";
 import TripleBeam from 'triple-beam';
 import { TrimParameters } from "@alirya/string/trim.js";
-import ToYaml from '../../string/to-yaml.js';
-import {DumpOptions} from "js-yaml";
+import {DumpOptions, dump, DEFAULT_SCHEMA} from "js-yaml";
 
 export type YamlOption = DumpOptions & {
     timezone : string;
     format : string
 };
 
+export const YamlDefaultDumpOption : DumpOptions = Object.freeze({
+    schema : DEFAULT_SCHEMA,
+    quotingType: "'",
+});
+
 export default class Yaml implements Format {
 
+    public options: YamlOption;
 
-    constructor(public options: YamlOption) {
+    constructor(options: YamlOption) {
 
+        this.options = Object.assign({}, YamlDefaultDumpOption, options);
     }
 
     transform (transform : TransformableInfo, opts?: any) :  TransformableInfo {
@@ -31,7 +37,7 @@ export default class Yaml implements Format {
 
         if(meta) {
 
-            body = ToYaml(meta, this.options);
+            body = dump(meta, this.options)
         }
 
         transform[TripleBeam.MESSAGE] = TrimParameters(`${date}: ${message}\n${body}`);

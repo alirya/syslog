@@ -8,12 +8,5 @@ enum Level {
     NOTICE = 5,
     INFORMATIONAL  = 6,
     DEBUG = 7,
-
-    // terse
-    EMERG = 0,
-    CRIT  = 2,
-    INFO  = 6,
-
-
 }
 export default Level;

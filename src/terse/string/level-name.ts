@@ -1,8 +1,8 @@
-import Level from '../level/level.js';
-
+import Level from '../../level/level.js';
+import {TerseLevel} from "../level/level.js";
 
 const list = new Map<number|string, string>(
-    Object.entries<number|string>(Level)
+    Object.entries<number|string>(TerseLevel)
         .map(([name , value]) => [value, name])
 )
 
@@ -16,5 +16,6 @@ export default function LevelName(level : Level) : string {
     }
 
     return value;
-
 }
+
+export {LevelName as TerseLevelName};
