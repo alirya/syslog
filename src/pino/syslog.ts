@@ -6,7 +6,7 @@ import {
     TransportSingleOptions
 } from "pino";
 import {LoggerOptions} from "pino";
-import Syslog from "../syslog.js";
+import MainSyslog from "../syslog.js";
 import {TerseLevel} from "../terse/level/level.js";
 import ReverseLevel from "../record/reverse-level.js";
 import {TerseSyslog} from "../terse/syslog.js";
@@ -17,9 +17,9 @@ import {LevelRecord} from "../level/record/level.js";
 const PinoReversedSeverity  = new Map<typeof Level | typeof TerseLevel, Record<string, number>>();
 
 
-export default function Syslog(option: LoggerOptions, severity : typeof Level) : Syslog<[string, ...any[]]>;
+export default function Syslog(option: LoggerOptions, severity : typeof Level) : MainSyslog<[string, ...any[]]>;
 export default function Syslog(option: LoggerOptions, severity : typeof TerseLevel) : TerseSyslog<[string, ...any[]]>;
-export default function Syslog(option: LoggerOptions, severity : typeof Level | typeof TerseLevel) : Syslog<[string, ...any[]]>|TerseSyslog<[string, ...any[]]> {
+export default function Syslog(option: LoggerOptions, severity : typeof Level | typeof TerseLevel) : MainSyslog<[string, ...any[]]>|TerseSyslog<[string, ...any[]]> {
 
     let reversedSeverity = PinoReversedSeverity.get(severity);
 
@@ -49,6 +49,7 @@ export default function Syslog(option: LoggerOptions, severity : typeof Level | 
         }
     }
 
+    option.useOnlyCustomLevels = true;
     option.customLevels = reversedSeverity;
 
     return Adapter(pino(option) as Logger<{customLevels: LevelRecord}>)

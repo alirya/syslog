@@ -9,7 +9,6 @@ const pino = Pino({
             colorize: true,
         }
     },
-    useOnlyCustomLevels: true,
     level: Level[Level.DEBUG],
 }, Level);
 

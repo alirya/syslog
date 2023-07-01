@@ -22,7 +22,7 @@ export default function Adapter<Type extends AdapterLevelType>(
 
     for (const key in insensitive) {
 
-        syslog[key] = (message : string, ...args : any[]) => insensitive[key as string](...args, message);
+        syslog[key] = (message : string, ...args : any[]) => insensitive[key as string](Array.from(args), message, {type: 'string'});
     }
 
     return syslog as Syslog<[string, ...any[]]>|TerseSyslog<[string, ...any[]]>;
