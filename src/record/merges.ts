@@ -5,28 +5,50 @@ import {TerseLevel} from "../terse/level/level.js";
 import {TerseSyslog} from "../terse/syslog.js";
 
 
-export default function Merges<Key extends typeof Level, Arguments extends unknown[] = unknown[]>(
+export type MergesType<
+    Key extends typeof Level | typeof TerseLevel,
+    Arguments extends unknown[] = unknown[]
+> = MergesTypeSyslog<Key, Arguments> & {
+
+    syslogs : MergesTypeSyslog<Key, Arguments>[];
+}
+
+export type MergesTypeSyslog<
+    Key extends typeof Level | typeof TerseLevel,
+    Arguments extends unknown[] = unknown[]
+> = Key extends typeof Level ? Syslog<Arguments> : TerseSyslog<Arguments>;
+
+export default function Merges<
+    Key extends typeof Level, Arguments extends unknown[] = unknown[]
+>(
     keys : ReadonlyArray<keyof Key>,
     syslogs : Syslog<Arguments>[]
-) : Syslog<Arguments>;
+) : MergesType<Key, Arguments>;
 
-export default function Merges<Key extends typeof TerseLevel, Arguments extends unknown[] = unknown[]>(
+export default function Merges<
+    Key extends typeof TerseLevel, Arguments extends unknown[] = unknown[]
+>(
     keys : ReadonlyArray<keyof Key>,
     syslogs : TerseSyslog<Arguments>[]
-) : TerseSyslog<Arguments>;
+) : MergesType<Key, Arguments>;
 
-export default function Merges<Key extends typeof Level | typeof TerseLevel, Arguments extends unknown[] = unknown[]>(
+export default function Merges<
+    Key extends typeof Level | typeof TerseLevel,
+    Arguments extends unknown[] = unknown[]
+>(
     keys : ReadonlyArray<keyof Key>,
-    syslogs : Syslog<Arguments>[]|TerseSyslog<Arguments>[]
-) : Syslog<Arguments>|TerseSyslog<Arguments> {
+    syslogs : MergesTypeSyslog<Key, Arguments>[]
+) : MergesType<Key, Arguments> {
 
-    return Object.assign({}, ...keys.map(property => {
+    const container = {syslogs};
+
+    return Object.assign(container, ...keys.map(property => {
 
         const key = (property as string).toLowerCase();
 
         const fn = function (...argument) {
 
-            for (const syslog of syslogs) {
+            for (const syslog of container.syslogs) {
 
                 syslog[key](...argument);
             }
