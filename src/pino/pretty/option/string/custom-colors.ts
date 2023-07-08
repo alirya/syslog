@@ -1,5 +1,4 @@
 import Level from "../../../../level/level.js";
-import {TerseLevel} from "../../../../terse/level/level.js";
 import ReverseLevel from "../../../../record/reverse-level.js";
 
 

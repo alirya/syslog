@@ -1,5 +1,4 @@
 import Syslog from "../syslog.js";
-import Keys from "../level/array/keys.js";
 import Level from "../level/level.js";
 import {TerseLevel} from "../terse/level/level.js";
 import {TerseSyslog} from "../terse/syslog.js";

@@ -1,5 +1,4 @@
 import Level from "../level.js";
-import {IsNumeric} from '@alirya/string/boolean/numeric.js';
 import EnumStringKeys from "../../../array/enum-string-keys.js";
 
 
