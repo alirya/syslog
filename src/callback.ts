@@ -1,14 +1,15 @@
 import Syslog from './syslog.js';
 import RecordCallback from "./record/callback.js";
-import Keys from "./level/array/keys.js";
+import Level from "./level/level.js";
 
 export default function Callback<
     Arguments extends unknown[] = unknown[]
 >(
-    callback : (severity:string, ...args:Arguments)=>void
+    callback : (severity:string, ...args:Arguments)=>void,
+    severity: Level = Level.DEBUG
 ) : Syslog<Arguments> {
 
-    return RecordCallback(Keys, callback)
+    return  RecordCallback(Level, callback, severity)
 }
 
 export {Callback as SyslogCallback}

@@ -1,35 +1,53 @@
 import Syslog from "../syslog.js";
-import Keys from "../level/array/keys.js";
 import Level from "../level/level.js";
 import {TerseLevel} from "../terse/level/level.js";
 import {TerseSyslog} from "../terse/syslog.js";
+import {IsNumeric} from '@alirya/string/boolean/numeric.js';
+import NoOp from '@alirya/function/no-op.js';
+import Callable from '@alirya/function/callable.js';
 
 
-export default function Callback<Key extends typeof Level, Arguments extends unknown[] = unknown[]>(
-    keys : ReadonlyArray<keyof Key>,
-    callback : (severity:keyof Key, ...args:Arguments) => void
+export default function Callback<Arguments extends unknown[] = unknown[]>(
+    enums : typeof Level,
+    callback : Callable<[keyof typeof Level, ...Arguments], void >,
+    level : Level
 ) : Syslog<Arguments>;
 
-export default function Callback<Key extends typeof TerseLevel, Arguments extends unknown[] = unknown[]>(
-    keys : ReadonlyArray<keyof Key>,
-    callback : (severity:keyof Key, ...args:Arguments) => void
+export default function Callback<Arguments extends unknown[] = unknown[]>(
+    enums : typeof TerseLevel,
+    callback : Callable<[keyof typeof TerseLevel, ...Arguments], void >,
+    level : TerseLevel
 ) : TerseSyslog<Arguments>;
 
-export default function Callback<Key extends typeof Level | typeof TerseLevel, Arguments extends unknown[] = unknown[]>(
-    keys : ReadonlyArray<keyof Key>,
-    callback : (severity:keyof Key, ...args:Arguments) => void
-) : Syslog<Arguments>|TerseSyslog<Arguments> {
+export default function Callback<Arguments extends unknown[] = unknown[]>(
+    enums : typeof Level | typeof TerseLevel,
+    callback :  Callable<[keyof typeof Level, ...Arguments], void> |
+                Callable<[keyof typeof TerseLevel, ...Arguments], void>,
+    level : Level | TerseLevel
+) : Syslog<Arguments> | TerseSyslog<Arguments> {
 
-    return Object.assign({}, ...keys.map(property => {
+    const functions = (Object.entries(enums) as [string, number][])
+        .filter(([key, lvl]) => !IsNumeric(key))
+        .map(([key, lvl]) => {
 
-        const key = (property as string).toLowerCase();
+            let fn: (...args:Arguments) => void;
 
-        const fn = function (...argument : Arguments) {
+            if(lvl <= (level as number)) {
 
-            callback(property, ...argument)
-        }
+                fn = (...argument : Arguments) => {
 
-        return {[key] : fn}
-    }));
+                    callback(key as keyof typeof Level & TerseLevel, ...argument)
+                }
+
+            } else {
+
+                fn = NoOp;
+            }
+
+            return {[key.toLowerCase()] : fn}
+
+        })
+
+    return Object.assign({}, ...functions);
 }
 
