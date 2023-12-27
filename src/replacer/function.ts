@@ -1,5 +1,5 @@
 import Replacer, {ReplacerReturn} from './replacer';
-import FunctionType from '@alirya/function/boolean/function.js';
+import FunctionType from '@axiona/function/boolean/function.js';
 import util from "util";
 
 export default function Date(value: any, formatted:any[] = [], parent?: Replacer) : ReplacerReturn {

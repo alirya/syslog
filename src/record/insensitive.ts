@@ -2,7 +2,7 @@ import Syslog from "../syslog.js";
 import {TerseLevelRecord} from "../terse/level/record/level.js";
 import {LevelRecord} from "../level/record/level.js";
 import {TerseSyslog} from "../terse/syslog.js";
-import {IsFunction} from '@alirya/function/boolean/function.js';
+import {IsFunction} from '@axiona/function/boolean/function.js';
 import EnumStringKeys from "../array/enum-string-keys.js";
 
 export default function Insensitive<Level extends TerseLevelRecord>(

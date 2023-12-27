@@ -1,5 +1,5 @@
 {
-  "name": "@alirya/syslog",
+  "name": "@axiona/syslog",
   "version": "0.4.1",
   "description": "Typescript syslog",
   "publishConfig": {
@@ -12,26 +12,26 @@
     "cache": false
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/alirya/syslog",
+  "homepage": "https://github.com/axiona/syslog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alirya/syslog"
+    "url": "https://github.com/axiona/syslog"
   },
   "dependencies": {
     "tslib": "^2.5.0",
-    "@alirya/function": "^0.17.1",
-    "@alirya/object": "^0.38.1",
-    "@alirya/string": "^0.17.1",
-    "@alirya/class": "^0.4.1",
-    "@alirya/value": "^0.16.1",
-    "@alirya/validatable": "^0.21.1",
+    "@axiona/function": "^0.17.1",
+    "@axiona/object": "^0.38.1",
+    "@axiona/string": "^0.17.1",
+    "@axiona/class": "^0.4.1",
+    "@axiona/value": "^0.16.1",
+    "@axiona/validatable": "^0.21.1",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.10.2",
     "moment": "^2.28.0",
     "moment-timezone": "^0.5.33",
-    "@alirya/filesystem": "^0.5.1",
+    "@axiona/filesystem": "^0.5.1",
     "js-yaml": "^4.1.0",
     "@types/js-yaml": "^4.0.5",
     "cpy-cli": "^3.1.1",

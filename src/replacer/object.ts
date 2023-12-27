@@ -1,5 +1,5 @@
 import Replacer, {ReplacerReturn} from './replacer.js';
-import ObjectType from '@alirya/object/boolean/object.js';
+import ObjectType from '@axiona/object/boolean/object.js';
 
 export default function Object(value: any, formatted:any[] = [], parent?: Replacer) : ReplacerReturn {
 

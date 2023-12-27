@@ -1,5 +1,5 @@
 import Replacer, {ReplacerReturn} from './replacer.js';
-import {IsSymbol} from '@alirya/object/symbol/boolean/symbol.js';
+import {IsSymbol} from '@axiona/object/symbol/boolean/symbol.js';
 
 
 export default function  Symbol(value: any, formatted:any[] = [], parent?: Replacer) : ReplacerReturn {

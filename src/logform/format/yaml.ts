@@ -1,7 +1,7 @@
 import {Format, TransformableInfo} from "logform";
 import moment from "moment-timezone";
 import TripleBeam from 'triple-beam';
-import { TrimParameters } from "@alirya/string/trim.js";
+import { TrimParameters } from "@axiona/string/trim.js";
 import {DumpOptions, dump, DEFAULT_SCHEMA} from "js-yaml";
 
 export type YamlOption = DumpOptions & {

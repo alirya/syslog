@@ -2,9 +2,9 @@ import Syslog from "../syslog.js";
 import Level from "../level/level.js";
 import {TerseLevel} from "../terse/level/level.js";
 import {TerseSyslog} from "../terse/syslog.js";
-import {IsNumeric} from '@alirya/string/boolean/numeric.js';
-import NoOp from '@alirya/function/no-op.js';
-import Callable from '@alirya/function/callable.js';
+import {IsNumeric} from '@axiona/string/boolean/numeric.js';
+import NoOp from '@axiona/function/no-op.js';
+import Callable from '@axiona/function/callable.js';
 
 
 export default function Callback<Arguments extends unknown[] = unknown[]>(

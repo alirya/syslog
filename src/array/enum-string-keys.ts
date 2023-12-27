@@ -1,4 +1,4 @@
-import {IsNumeric} from '@alirya/string/boolean/numeric.js';
+import {IsNumeric} from '@axiona/string/boolean/numeric.js';
 
 export default function EnumStringKeys<
     Type extends Record<string, any>

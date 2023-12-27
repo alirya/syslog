@@ -1,5 +1,5 @@
 import * as child_process from "child_process";
-import CurrentDir from '@alirya/filesystem/string/current-dir.js';
+import CurrentDir from '@axiona/filesystem/string/current-dir.js';
 const currentDir = CurrentDir(import.meta);
 
 

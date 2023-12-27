@@ -1,6 +1,6 @@
 import Replacer, {ReplacerReturn} from './replacer.js';
-import ObjectType from '@alirya/object/boolean/object.js';
-import Name from '@alirya/object/string/name.js';
+import ObjectType from '@axiona/object/boolean/object.js';
+import Name from '@axiona/object/string/name.js';
 
 
 export default function CircularReference(value: any, formatted:any[] = [], parent?: Replacer) : ReplacerReturn {

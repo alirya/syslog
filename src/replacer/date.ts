@@ -1,5 +1,5 @@
 import Replacer, {ReplacerReturn} from './replacer.js';
-import Callable from '@alirya/function/callable.js';
+import Callable from '@axiona/function/callable.js';
 
 export default function Date(formatter:Callable<[globalThis.Date], string> = date => date.toString()) : Replacer {
 

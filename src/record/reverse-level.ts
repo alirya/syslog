@@ -1,4 +1,4 @@
-import {IsNumeric} from '@alirya/string/boolean/numeric.js';
+import {IsNumeric} from '@axiona/string/boolean/numeric.js';
 
 export default function ReverseLevel(record: Record<string|number, string|number>) : Record<string, number> {
 
