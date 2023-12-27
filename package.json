@@ -1,6 +1,6 @@
 {
   "name": "@axiona/syslog",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Typescript syslog",
   "publishConfig": {
     "directory": "dist"
@@ -19,19 +19,19 @@
   },
   "dependencies": {
     "tslib": "^2.5.0",
-    "@axiona/function": "^0.17.1",
-    "@axiona/object": "^0.38.1",
-    "@axiona/string": "^0.17.1",
-    "@axiona/class": "^0.4.1",
-    "@axiona/value": "^0.16.1",
-    "@axiona/validatable": "^0.21.1",
+    "@axiona/function": "^0.18.0",
+    "@axiona/object": "^0.39.0",
+    "@axiona/string": "^0.18.0",
+    "@axiona/class": "^0.5.0",
+    "@axiona/value": "^0.17.0",
+    "@axiona/validatable": "^0.22.0",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.10.2",
     "moment": "^2.28.0",
     "moment-timezone": "^0.5.33",
-    "@axiona/filesystem": "^0.5.1",
+    "@axiona/filesystem": "^0.6.0",
     "js-yaml": "^4.1.0",
     "@types/js-yaml": "^4.0.5",
     "cpy-cli": "^3.1.1",
